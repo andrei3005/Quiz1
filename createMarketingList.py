@@ -37,17 +37,23 @@ outfile = open('avg_steps.csv','w')
 
 
 # create an empty dictionary
-dict(customers)
+#dict(customers)
 customers = {}
 
 
 # iterate through the csv object
-
-
+outfile.write("Name, Email, Phone\n")
+for record in csvfile:
+    #customer_name = record[0]
+    #email = record[1]
+    #phone = record[2]
+    customers["full_name"] = record[0]
+    customers["email_address"] = record[1]
+    customers["phone"] = record[2]
 
 
     # add the key-value pair to the dictionary
-
+    customers["full_name"]
 
 
 # print the dictionary after the loop is finished
@@ -55,7 +61,8 @@ customers = {}
 
 
 # iternate through the dictionary and write to the output file
-
+for key in customers:
+    print(key)
 
 
 # close your output file
