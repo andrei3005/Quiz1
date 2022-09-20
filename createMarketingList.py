@@ -30,7 +30,7 @@ infile = open('VendorList.csv','r')
 csvfile = csv.reader(infile, delimiter=',')
 
 # create an output file
-outfile = open('avg_steps.csv','w')
+outfile = open('marketinglistFINAL.csv','w')
 
 Full_Name = ""
 Email_Add = ""
@@ -48,12 +48,14 @@ customers = {
 }
 '''
 #{'Tommie Goody': {'email': 'tgoody0@weather.com', 'phone': '809-992-7298'}
+
 customers = {
     Full_Name: {
         "email": Email_Add,
         "phone": Phone_Num
     }
 }
+
 '''
 customers = {
     "class":{
@@ -67,6 +69,7 @@ customers = {
     }
 }
 '''
+#customers = {}
 
 # iterate through the csv object
 outfile.write("Name, Email, Phone\n")
@@ -75,13 +78,16 @@ for record in csvfile:
     #email = record[1]
     #phone = record[2]
     #print(sampleDict["class"]["student"]["marks"]["history"])
+    
     customers[Full_Name] = record[0]
-    customers[Full_Name["email"]] = record[1]
-    customers[Full_Name["phone"]] = record[2]
+    #customers[Full_Name["email"]] = record[1]
+    #customers[Full_Name["phone"]] = record[2]
 
 
     # add the key-value pair to the dictionary
-    
+    #customers['Full_Name'] = record[0] + record [1] + record[2]
+    #customers['Full_Name'['email']] = record[1]
+    #customers['Full_Name'['phone']] = record[2]
 
 
 # print the dictionary after the loop is finished
@@ -90,8 +96,8 @@ print(customers)
 
 # iternate through the dictionary and write to the output file
 for key in customers:
-    print(key)
+    outfile.write(key)
 
 
 # close your output file
-
+outfile.close()
