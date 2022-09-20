@@ -24,19 +24,21 @@
 import csv
 
 # open the vendorlist file
-
+infile = open('VendorList.csv','r')
 
 # create a csv object from the file object
-
+csvfile = csv.reader(infile, delimiter=',')
 
 # create an output file
+outfile = open('avg_steps.csv','w')
 
 
 
 
 
 # create an empty dictionary
-
+dict(customers)
+customers = {}
 
 
 # iterate through the csv object
